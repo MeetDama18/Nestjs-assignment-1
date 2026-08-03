@@ -26,4 +26,4 @@ export const handler: Handler = async (
     cachedServer = await bootstrap();
   }
   return cachedServer(event, context, callback);
-};X
+};
