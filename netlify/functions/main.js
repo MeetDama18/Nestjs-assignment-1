@@ -1,3 +1,6 @@
 /* eslint-env node */
-const { handler } = require('../../dist/main');
-exports.handler = handler;
+const { handler: originalHandler } = require('../../dist/main');
+
+exports.handler = async (event, context) => {
+  return originalHandler(event, context);
+};
